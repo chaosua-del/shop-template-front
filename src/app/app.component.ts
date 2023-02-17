@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { routes } from './constants/routes';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  routeNames = routes;
   title = 'shop-template-front';
 }
