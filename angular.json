@@ -5,6 +5,7 @@
   "projects": {
     "shop-template-front": {
       "projectType": "application",
+      "i18n": {"sourceLocale": "en", "locales": {"ua": "src/locale/messages.ua.xlf"}},
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -17,6 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": ["en"],
             "outputPath": "dist/shop-template-front/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -28,6 +30,11 @@
             "scripts": []
           },
           "configurations": {
+            "ua": {
+              "localize": ["ua"],
+              "outputPath": "dist/under-construction-ua/",
+              "i18nMissingTranslation": "error"
+            },
             "production": {
               "budgets": [
                 {
@@ -59,6 +66,9 @@
           "configurations": {
             "production": {
               "browserTarget": "shop-template-front:build:production"
+            },
+            "ua": {
+              "browserTarget": "shop-template-front:build:ua"
             },
             "development": {
               "browserTarget": "shop-template-front:build:development"
