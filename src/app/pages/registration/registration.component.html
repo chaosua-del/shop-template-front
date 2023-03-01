@@ -1,0 +1,25 @@
+<div class="centered-container">
+  <h3 class="mb-4">Registration</h3>
+  <form
+    [formGroup]="form"
+    class="card p-4 col-xl-10 col-12"
+    (ngSubmit)="onSubmit()">
+    <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+    <div class="d-flex align-items-center w-100 justify-content-between">
+      <button
+        type="submit"
+        class="d-block align-self-start w-50 btn btn-primary">
+        Submit
+      </button>
+      <span class="mx-3 ml-auto">or Sign Up with</span>
+      <div class="d-flex align-items-center">
+        <button type="button" class="btn btn-outline-dark me-3 brand-button">
+          <fa-icon [icon]="facebookIcon"></fa-icon>
+        </button>
+        <button type="button" class="btn btn-outline-dark brand-button">
+          <fa-icon [icon]="googleIcon"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
